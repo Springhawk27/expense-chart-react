@@ -1,6 +1,35 @@
 import { useState } from "react";
 import "./ExpenseChart.scss";
 
+const getColor = (key) => {
+  switch (key) {
+    case "personal":
+      return "#4C49ED";
+    case "shopping":
+      return "#9D9BF4";
+    case "phone":
+      return "#4FD18B";
+    case "other":
+      return "#141197";
+    default:
+      return "#000000"; // default color
+  }
+};
+
+const getColorLabel = (key) => {
+  switch (key) {
+    case "personal":
+      return "Personal";
+    case "shopping":
+      return "Shopping";
+    case "phone":
+      return "Phone";
+    case "other":
+      return "Other";
+    default:
+      return "Unknown";
+  }
+};
 const ExpenseChart = () => {
   const [selectedPeriod, setSelectedPeriod] = useState("1M");
   const data = [
@@ -57,6 +86,21 @@ const ExpenseChart = () => {
         </div>
         <div className="pie-chart">
           <div className="total-expense">${selectedData.total || 0.0}</div>
+        </div>
+        <div className="legend">
+          {Object.entries(selectedData).map(
+            ([key]) =>
+              key !== "period" &&
+              key !== "total" && (
+                <div key={key} className="legend-item">
+                  <div
+                    className="color"
+                    style={{ backgroundColor: getColor(key) }}
+                  ></div>
+                  <div className="label">{`${getColorLabel(key)}`}</div>
+                </div>
+              )
+          )}
         </div>
       </div>
     </div>

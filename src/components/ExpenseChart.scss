@@ -3,6 +3,10 @@ $card-background: #ffffff;
 $options-color: #373b47;
 $neutral-black: #1f1f23;
 $active-color: #003eff;
+$personal-color: #4c49ed;
+$shopping-color: #9d9bf4;
+$phone-color: #4fd18b;
+$other-color: #141197;
 
 .expense-chart {
   color: #fff;
@@ -20,7 +24,9 @@ $active-color: #003eff;
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
       margin-top: 0;
       color: $neutral-black;
@@ -32,10 +38,12 @@ $active-color: #003eff;
     }
 
     .options {
+      width: fit-content;
       margin-bottom: 20px;
       display: flex;
       padding: 12px 32px;
       align-items: center;
+      justify-content: center;
       gap: 12px;
       border-radius: 30px;
       background: #f5f6fa;
@@ -58,6 +66,26 @@ $active-color: #003eff;
           color: $active-color;
           background: white;
           border-radius: 30px;
+        }
+      }
+    }
+    .legend {
+      display: flex;
+      justify-content: space-around;
+      gap: 22px;
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+
+        .color {
+          width: 37px;
+          height: 13px;
+          margin-right: 5px;
+          border-radius: 33px;
+        }
+        .label {
+          color: #1f1f23;
         }
       }
     }
