@@ -1,0 +1,65 @@
+$primary-color: #430099;
+$card-background: #ffffff;
+$options-color: #373b47;
+$neutral-black: #1f1f23;
+$active-color: #003eff;
+
+.expense-chart {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+
+  .header {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .card {
+    background-color: $card-background;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+
+    h2 {
+      margin-top: 0;
+      color: $neutral-black;
+      font-family: Helvetica Neue;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .options {
+      margin-bottom: 20px;
+      display: flex;
+      padding: 12px 32px;
+      align-items: center;
+      gap: 12px;
+      border-radius: 30px;
+      background: #f5f6fa;
+
+      color: $options-color;
+      font-family: Helvetica Neue;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.84px;
+      text-transform: uppercase;
+
+      span {
+        cursor: pointer;
+        margin-right: 10px;
+        padding: 8px 10px;
+
+        &.active {
+          color: $active-color;
+          background: white;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}

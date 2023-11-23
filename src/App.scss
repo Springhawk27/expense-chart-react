@@ -6,12 +6,19 @@ $primary-color: #430099;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
   padding-top: 20px;
 
   h1 {
     color: #fff;
-    font-size: 24px;
+    text-align: center;
+    font-family: Helvetica Neue;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     margin: 0;
   }
 }
