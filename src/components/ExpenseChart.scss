@@ -39,7 +39,6 @@ $other-color: #141197;
 
     .options {
       width: fit-content;
-      margin-bottom: 20px;
       display: flex;
       padding: 12px 32px;
       align-items: center;
@@ -69,6 +68,28 @@ $other-color: #141197;
         }
       }
     }
+
+    .pie-chart {
+      position: relative;
+      margin: 20px 0;
+      width: 264px;
+
+      .chart-svg {
+        transform: rotate(240deg);
+      }
+
+      .total-expense {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        font-weight: 700;
+        color: black;
+        z-index: 2;
+      }
+    }
+
     .legend {
       display: flex;
       justify-content: space-around;
@@ -81,7 +102,7 @@ $other-color: #141197;
         .color {
           width: 37px;
           height: 13px;
-          margin-right: 5px;
+          margin-right: 10px;
           border-radius: 33px;
         }
         .label {
