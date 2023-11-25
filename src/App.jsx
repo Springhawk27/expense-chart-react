@@ -1,5 +1,5 @@
 import "./App.scss";
-import ExpenseChart from "./components/ExpenseChart";
+import ExpenseChart from "./components/ExpenseChart/ExpenseChart";
 
 function App() {
   return (

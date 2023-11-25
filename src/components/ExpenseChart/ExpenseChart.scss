@@ -1,6 +1,7 @@
 $primary-color: #430099;
-$card-background: #ffffff;
 $options-color: #373b47;
+$options-background: #f5f6fa;
+$neutral-white: #ffffff;
 $neutral-black: #1f1f23;
 $active-color: #003eff;
 $personal-color: #4c49ed;
@@ -9,7 +10,7 @@ $phone-color: #4fd18b;
 $other-color: #141197;
 
 .expense-chart {
-  color: #fff;
+  color: $neutral-white;
   text-align: center;
   padding: 20px;
 
@@ -20,13 +21,14 @@ $other-color: #141197;
   }
 
   .card {
-    background-color: $card-background;
+    background-color: $neutral-white;
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h2 {
       margin-top: 0;
       color: $neutral-black;
@@ -45,7 +47,7 @@ $other-color: #141197;
       justify-content: center;
       gap: 12px;
       border-radius: 30px;
-      background: #f5f6fa;
+      background: $options-background;
 
       color: $options-color;
       font-family: Helvetica Neue;
@@ -63,7 +65,7 @@ $other-color: #141197;
 
         &.active {
           color: $active-color;
-          background: white;
+          background: $neutral-white;
           border-radius: 30px;
         }
       }
@@ -85,7 +87,7 @@ $other-color: #141197;
         transform: translate(-50%, -50%);
         font-size: 30px;
         font-weight: 700;
-        color: black;
+        color: $neutral-black;
         z-index: 2;
       }
     }
@@ -106,7 +108,7 @@ $other-color: #141197;
           border-radius: 33px;
         }
         .label {
-          color: #1f1f23;
+          color: $neutral-black;
         }
       }
     }
