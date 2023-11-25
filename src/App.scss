@@ -1,4 +1,5 @@
 $primary-color: #430099;
+$neutral-white: #ffffff;
 
 .app {
   height: 100vh;
@@ -7,12 +8,11 @@ $primary-color: #430099;
   padding: 0;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
 
   h1 {
-    color: #fff;
+    color: $neutral-white;
     text-align: center;
     font-family: Helvetica Neue;
     font-size: 42px;
